@@ -1,0 +1,62 @@
+.z-label, .z-radio-content, .z-checkbox-content, .z-loading {
+	font-size: 14px;
+}
+.z-combobox, 
+.z-bandbox, 
+.z-datebox, 
+.z-timebox, 
+.z-spinner, 
+.z-doublespinner,
+.z-combobox-input,
+.z-bandbox-input,
+.z-datebox-input,
+.z-timebox-input,
+.z-spinner-input,
+.z-doublespinner-input,
+.z-timebox-button,
+.z-spinner-button,
+.z-doublespinner-button
+.z-combobox-button,
+.z-bandbox-button,
+.z-datebox-button,
+.z-timebox-button,
+.z-spinner-button,
+.z-doublespinner-button {
+	height: 30px;
+}
+
+.z-combobox-button, 
+.z-bandbox-button, 
+.z-datebox-button, 
+.z-timebox-button, 
+.z-spinner-button, 
+.z-doublespinner-button {
+  -webkit-border-radius: 0 0 0 0;
+  -moz-border-radius: 0 0 0 0;
+  -o-border-radius: 0 0 0 0;
+  -ms-border-radius: 0 0 0 0;
+  border-radius: 0 0 0 0;
+}
+
+.z-timebox-button>a, .z-spinner-button>a, .z-doublespinner-button>a {
+	height: 14px;
+	line-height: 14px;
+}
+
+[class^="z-icon-"], [class*=" z-icon-"] {
+	font-size: 14px;
+}
+
+.mailbox-controls .z-label {
+  line-height: 30px;
+}
+.form-control.z-combobox {
+	padding: 0;
+	border-width: 0;
+}
+.search-bar {
+	background: #f2f2f2;
+}
+.with-border {
+	border: 1px solid #f2f2f2;
+}

@@ -1,0 +1,10 @@
+<zk xmlns:n="native">
+
+<n:footer class="main-footer">
+                <n:div class="pull-right hidden-xs">
+                    <n:b>${labels.app.title}, Version</n:b> ${labels.app.version}
+                </n:div>
+                ${labels.app.copyright}
+            </n:footer>
+
+</zk>

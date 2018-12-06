@@ -1,0 +1,23 @@
+<zk xmlns:n="native">
+	<n:aside class="main-sidebar">
+		<n:section class="sidebar">
+			<div sclass="user-panel" zclass="none">
+				<n:div class="pull-left image">
+					<n:img src="img/profile-pictures.png"
+						class="img-circle" alt="User Image" />
+				</n:div>
+				<n:div class="pull-left info">
+					<n:p>Alexander Pierce</n:p>
+					<n:a href="#">
+						<n:i class="fa fa-circle text-success"></n:i>
+						Online
+					</n:a>
+				</n:div>
+			</div>
+			
+			<n:ul class="sidebar-menu" data-widget="tree">
+				<n:li class="header">MAIN NAVIGATION</n:li>
+			</n:ul>
+		</n:section>
+	</n:aside>
+</zk>

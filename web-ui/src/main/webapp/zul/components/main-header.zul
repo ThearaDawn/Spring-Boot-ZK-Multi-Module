@@ -1,0 +1,79 @@
+<zk xmlns:n="native">
+	<n:header class="main-header">
+		<n:a href="./" class="logo">
+			<n:span class="logo-mini">
+				<n:img src="img/mini-logo.png"
+					style="width: 50px; height: 50px" />
+			</n:span>
+			<n:span class="logo-lg">
+				<n:img src="img/mini-logo.png"
+					style="width: 50px; height: 50px" />
+					Starter App
+			</n:span>
+		</n:a>
+		<n:nav class="navbar navbar-static-top">
+			
+			<n:a href="#" id="sidebar_toggle" sclass="sidebar-toggle" data-toggle="push-menu">
+				<span class="sr-only">Toggle navigation</span>
+			</n:a>
+
+			<div sclass="navbar-custom-menu">
+				<n:ul class="nav navbar-nav">
+					<n:li class="messages-menu">
+						<n:a href="./?m=calendar"
+							class="dropdown-toggle" aria-expanded="true">
+							<n:i class="fa fa-calendar"></n:i>
+							<n:span class="label label-success"></n:span>
+						</n:a>
+					</n:li>
+					<n:li class="messages-menu" if="${not vm.authenticated}">
+						<a id="btnLogin" href="/login" tooltiptext="Login" sclass="dropdown-toggle">
+							<n:i class="fa fa-key"> Login</n:i>
+							<n:span class="label label-success"></n:span>
+						</a>
+					</n:li>
+					<n:li class="dropdown user user-menu" if="${vm.authenticated}">
+						<div id="pnlAuth"></div>
+						<n:a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<n:img src="img/profile-pictures.png"
+								class="user-image" alt="User Image" />
+							<n:span class="hidden-xs">
+								Alexander Pierce
+							</n:span>
+						</n:a>
+						<n:ul class="dropdown-menu">
+							<n:li class="user-header">
+								<n:img src="img/profile-pictures.png"
+									class="img-circle" alt="User Image" />
+								<n:p>
+									Alexander Pierce -
+									Web Developer
+									<n:small>
+										Member since
+										Nov. 2012
+									</n:small>
+								</n:p>
+								 
+							</n:li>
+							<n:li class="user-footer">
+								<n:div class="pull-left">
+									<a id="btnChangePassword"
+										sclass="btn btn-default btn-flat"
+										onClick="@command('changePassword')">
+										Change Passowrd
+									</a>
+								</n:div>
+								<n:div class="pull-right">
+									<a id="btnLogout" sclass="btn btn-default btn-flat"
+										onClick="@command('logout')">
+										Sign out
+									</a>
+								</n:div>
+							</n:li>
+						</n:ul>
+					</n:li>
+				</n:ul>
+			</div>
+		</n:nav>	
+	</n:header>
+</zk>

@@ -1,0 +1,33 @@
+<?meta charset="utf-8"?>
+<?meta http-equiv="X-UA-Compatible" content="IE=edge"?>
+<?link rel="icon" href="/favicon.ico" type="image/x-icon" ?>
+<?meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"?>
+<?page title="${labels.app.title}, Version ${labels.app.version}" ?>
+
+<?link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" ?>
+<?link rel="stylesheet" href="/webjars/AdminLTE/2.4.3/dist/css/AdminLTE.min.css"  ?>
+<?link rel="stylesheet" href="/webjars/AdminLTE/2.4.3/dist/css/skins/skin-blue.css" ?>
+<?link rel="stylesheet" href="/webjars/font-awesome/4.7.0/css/font-awesome.min.css" ?>
+<?link rel="stylesheet" href="/css/app.css" ?>
+
+<?taglib uri="/WEB-INF/security.tld" prefix="sec"?>
+<zk xmlns:n="native">
+    <div zclass="none" sclass="wrapper" apply="org.zkoss.bind.BindComposer"
+         viewModel="@id('vm') @init('com.djava.webvm.MainVM')"
+         validationMessages="@id('vmsgs')">
+        <include id="header" zclass="none" mode="auto" src="components/main-header.zul"/>
+        <include zclass="none" src="components/sidebar.zul"/>
+		<include zclass="none" sclass="content-wrapper" src="components/workspace.zul" />
+		<include zclass="none" src="components/footer.zul"/>
+	</div>
+	<script>
+        <![CDATA[
+            zk.afterMount(function(){
+            	
+            });]]>
+    </script>
+    <script src="/webjars/jquery/3.3.1/jquery.js"/>
+    <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js" />
+    <script src="/webjars/AdminLTE/2.4.3/dist/js/adminlte.min.js" />
+    <script src="/js/app.js" />
+</zk>

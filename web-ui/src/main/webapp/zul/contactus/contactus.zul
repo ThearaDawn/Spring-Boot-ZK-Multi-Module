@@ -1,0 +1,73 @@
+<zk xmlns:n="native" xmlns:w="http://www.zkoss.org/2005/zk/client">
+	<div sclass="row" apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('com.djava.webvm.ContactusVM')"
+		validationMessages="@id('vmsgs')">
+		<div sclass="col-md-4">
+			<div sclass="box" form="@id('fn') @load(vm.contactus) @save(vm.contactus, before='save') @validator(vm.formValidator)">
+				<div sclass="box-header with-border">
+					<n:h3 class="box-title">New Contact</n:h3>
+				</div>
+				<div sclass="box-body">
+					<!-- <div sclass="form-group">
+						<label w:onClick="this.$f('txtId').focus()"
+							value="Id" />
+						<textbox id="txtId" sclass="form-control"
+							value="@load(vm.contactus.id)" readonly="true" placeholder="Id" />
+						<label id="lblId" value="@load(vmsgs['id'])" />
+					</div> -->
+					<div sclass="form-group">
+						<label w:onClick="this.$f('txtUsername').focus()"
+							value="Username" />
+						<textbox id="txtName" sclass="form-control"
+							value="@bind(vm.contactus.username)" placeholder="Username" />
+						<label id="lblusername" value="@load(vmsgs['username'])" />
+					</div>
+					<div sclass="form-group">
+						<label w:onClick="this.$f('txtPhonenumber').focus()"
+							value="Phone Number" />
+						<textbox id="txtPhonenumber" sclass="form-control"
+							value="@bind(vm.contactus.phonenumber)" placeholder="Phonenumber" />
+						<label id="lblPhonenumber" value="@load(vmsgs['phonenumber'])" />
+					</div>
+				</div>
+				<div sclass="box-footer">
+					<a onClick="@command('save')"
+						sclass="btn btn-primary">
+						<n:i class="fa fa-plus">Save</n:i>
+					</a>
+					<a onClick="@command('clean')"
+						sclass="btn btn-danger">
+						<n:i class="fa fa-remove">Clear</n:i>
+					</a>
+					<a onClick="@command('remove')" disabled="@load(empty vm.contactus.id)"
+						sclass="btn btn-danger">
+						<n:i class="fa fa-remove">Remove</n:i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div sclass="col-md-8">
+			<div sclass="box">
+				<div sclass="box-header with-border">
+					<n:h3 class="box-title">Contact List</n:h3>
+				</div>
+				<div sclass="box-body">
+					<listbox model="@load(vm.contactUsList)" selectedItem="@bind(vm.contactus)">
+						<listhead>
+							<listheader label="id" width="100px"></listheader>
+							<listheader label="Username" width="200px"></listheader>
+							<listheader label="Phone Number"></listheader>
+						</listhead>
+						<template name="model">
+							<listitem>
+								<listcell label="${each.id}"></listcell>
+								<listcell label="${each.username}"></listcell>
+								<listcell label="${each.phonenumber}"></listcell>
+							</listitem>
+						</template>
+					</listbox>
+				</div>
+			</div>
+		</div>
+	</div>
+</zk>
